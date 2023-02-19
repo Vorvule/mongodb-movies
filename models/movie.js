@@ -17,7 +17,7 @@ const movieSchema = new Schema({
 });
 
 // (Model name, model schema)
-// Model name is singular against its Collection:
+// Model name is singular form of its Collection:
 // Movie <-> movies (collection)
 const Movie = mongoose.model("Movie", movieSchema);
 
