@@ -15,8 +15,8 @@ const getMovies = (req, res) => {
 };
 
 const getMovie = (req, res) => {
+  // req.params.id is taken from the browser request parameters
   Movie
-    // req.params.id is taken from the browser address request
     .findById(req.params.id)
     .then((movie) => {
       res.status(200).json(movie);

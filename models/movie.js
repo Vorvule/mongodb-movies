@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-// constructor
+// Model constructor
 const Schema = mongoose.Schema;
 
 const movieSchema = new Schema({
@@ -16,9 +16,8 @@ const movieSchema = new Schema({
   review: [{ name: String, text: String }],
 });
 
-// (Model name, model schema)
-// Model name is singular form of its Collection:
-// Movie <-> movies (collection)
+// Model name (Movie) is a singular of the collection name (movies)
+// mongoose.model(name, schema)
 const Movie = mongoose.model("Movie", movieSchema);
 
 module.exports = Movie;

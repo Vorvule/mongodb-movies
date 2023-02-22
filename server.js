@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const movieRoutes = require("./routes/movie-routes");
 
+const movieRoutes = require("./routes/movie-routes");
 const constants = require("./constants");
 
 const PORT = constants.PORT;
@@ -17,6 +17,6 @@ mongoose
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.log("DB connection error: " + err));
 
-app.listen(PORT, (err) => {
-  err ? console.log(err) : console.log("Listening port " + PORT);
+app.listen(PORT, (error) => {
+  error ? console.error(error) : console.log("Listening port " + PORT);
 });

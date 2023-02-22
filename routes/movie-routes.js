@@ -10,8 +10,8 @@ const {
 
 const router = express.Router();
 
-router.get("/movies", getMovies);
 router.get("/movies/:id", getMovie);
+router.get("/movies", getMovies);
 router.delete("/movies/:id", deleteMovie);
 router.post("/movies", addMovie);
 router.patch("/movies/:id", updateMovie);
